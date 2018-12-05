@@ -48,6 +48,10 @@ header {
   color: #F74D98;
   font-size: 75px;
 }
+
+form {
+  display: flex;
+}
 /*This area is for right side CSS*/
 
 .winner-info-side {
