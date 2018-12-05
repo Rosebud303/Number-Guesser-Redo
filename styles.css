@@ -1,0 +1,49 @@
+/*Color references*/
+
+/*number guesser/error hex: #DD1972
+Button active/ right side: #6E6E6E
+Button letters: #FFFFFF
+Button inactive/left side: #D0D2D3
+UserGuess: #F74D98*/
+
+* {
+  margin: 0;
+}
+/*This CSS area is for the header/main body of game*/
+
+header {
+  background-color: #404041;
+}
+
+.full-game {
+  display: flex;
+}
+.side {
+  width: 50%;
+}
+
+/*This area is for left side CSS*/
+
+.game-info-side {
+  background-color: #F7F7F7;
+}
+
+.box {
+  background-color: #FFFFFF;
+  border: 1px solid black;
+}
+
+.user-guess-rating {
+  display: flex;
+  text-align: center;
+}
+
+.player-display-box {
+  width: 50%;
+  padding: 10px;
+}
+
+.guess-display {
+  color: #F74D98;
+  font-size: 100px;
+}
