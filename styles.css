@@ -30,7 +30,8 @@ header {
 
 .box {
   background-color: #FFFFFF;
-  border: 1px solid black;
+  border: 1px solid #6E6E6E;
+  margin: 10px;
 }
 
 .user-guess-rating {
@@ -45,7 +46,7 @@ header {
 
 .guess-display {
   color: #F74D98;
-  font-size: 100px;
+  font-size: 75px;
 }
 /*This area is for right side CSS*/
 
@@ -54,6 +55,10 @@ header {
 }
 
 .full-card-info {
-  border: 1px solid black;
+  border: 1px solid #6E6E6E;
   background-color: #FFFFFF;
+  padding: 10px;
+  margin: 10px;
 }
+
+
