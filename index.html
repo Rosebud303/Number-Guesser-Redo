@@ -9,30 +9,32 @@
     <h1>Number<span>Guesser</span></h1>
     <h4>Ultimate Challenger Edition</h4>
   </header>
-  <main>
-    <section>
-      <h3>Set Range</h3>
-      <div>
-        <p>Min Range</p>
-        <input type="" name="">
-      </div>
-      <div>
-        <p>Max Range</p>
-        <input type="" name="">
-      </div>
-      <button>Update</button>
-    </section>
-    <section>
-      <p>The Current Range is <span>1</span> to <span>100</span></p>
-      <h3>Challenger 1</h3>
-      <div>
-        <p>Name</p>
-        <input type="" name="">
-      </div>
-      <div>
-        <p>Guess</p>
-        <input type="" name="">
+  <main class="full-game">
+    <main class="game-info-side side">
+      <section class="range-box box">
+        <h3>Set Range</h3>
+        <div>
+          <p>Min Range</p>
+          <input type="" name="">
+        </div>
+        <div>
+          <p>Max Range</p>
+          <input type="" name="">
+        </div>
+        <button>Update</button>
+      </section>
+      <section class="player-info-box box">
+        <p>The Current Range is <span>1</span> to <span>100</span></p>
         <h3>Challenger 1</h3>
+        <div>
+          <p>Name</p>
+          <input type="" name="">
+        </div>
+        <div>
+          <p>Guess</p>
+          <input type="" name="">
+        </div>
+        <h3>Challenger 2</h3>
         <div>
           <p>Name</p>
           <input type="" name="">
@@ -47,23 +49,25 @@
           <button>Clear Game</button>
         </form>
       </section>
-      <section>
-        <h3>Latest Scorew</h3>
-        <section>
-          <h4>Challenger 1 Name</h4>
-          <p>current guess</p>
-          <h1>0</h1>
-          <p>player rating</p>
-        </section>
-        <section>
-          <h4>Challenger 2 Name</h4>
-          <p>current guess</p>
-          <h1>0</h1>
-          <p>player rating</p>
+      <section class="user-stats-box box">
+        <h3>Latest Score</h3>
+        <section class="user-guess-rating">
+          <section class="player1-displays player-display-box">
+            <h4>Challenger 1 Name</h4>
+            <p>current guess</p>
+            <h1 class="guess-display-one guess-display">0</h1>
+            <p>player rating</p>
+          </section>
+          <section class="player2-displays player-display-box">
+            <h4>Challenger 2 Name</h4>
+            <p>current guess</p>
+            <h1 class="guess-display-two guess-display">0</h1>
+            <p>player rating</p>
+          </section>
         </section>
       </section>
     </main>
-    <main>
+    <main class="winner-info-side side">
       <section>
         <section>
           <h3>Challenger 1 Name</h3>
@@ -81,5 +85,6 @@
         </section>
       </section>
     </main>
-  </body>
-  </html>
+  </main>
+</body>
+</html>
