@@ -10,16 +10,16 @@
     <h4>Ultimate Challenger Edition</h4>
   </header>
   <main class="full-game">
-    <main class="game-info-side side">
+    <section class="game-info-side side">
       <section class="range-box box">
         <h3>Set Range</h3>
         <article class="range-inputs"> 
-          <div>
-            <p>Min Range</p>
-            <form>             
-              <input class="min-range-input min-max" type="number" name="">
-            </form>
-          </div>
+          <!-- within this form is a good example for changing the others -->
+          <form>             
+            <label for="min-range-input">Min Range</label>
+            <input id="min-range-input" class="min-max" type="number" name="">
+          </form>
+          <!-- Kayla use this example to work with the other forms -->
           <div>
             <p>Max Range</p>
             <form>
@@ -86,8 +86,8 @@
           </section>
         </section>
       </section>
-    </main>
-    <main class="winner-info-side side">
+    </section>
+    <section class="winner-info-side side">
       <section class="full-card-info">
         <section>
           <h3>Challenger 1 Name</h3>
@@ -104,7 +104,7 @@
           <img class="delete-button" src="#">
         </section>
       </section>
-    </main>
+    </section>
   </main>
 </body>
 <script src="main.js"></script>
