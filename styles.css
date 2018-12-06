@@ -6,10 +6,12 @@ Button letters: #FFFFFF
 Button inactive/left side: #D0D2D3
 UserGuess: #F74D98*/
 
+
+/*Full game and header CSS*/
+
 * {
   margin: 0;
 }
-/*This CSS area is for the header/main body of game*/
 
 header {
   background-color: #404041;
@@ -22,7 +24,7 @@ header {
   width: 50%;
 }
 
-/*This area is for left side CSS*/
+/*Left side main CSS*/
 
 .game-info-side {
   background-color: #F7F7F7;
@@ -33,6 +35,24 @@ header {
   border: 1px solid #6E6E6E;
   margin: 10px;
 }
+
+.player-inputs, .range-inputs {
+  display: flex;
+}
+
+.min-max, .guesses {
+
+}
+
+/*Box 1*/
+
+/*Box 2*/
+
+.src-buttons {
+  display: flex;
+}
+
+/*Box 3*/
 
 .user-guess-rating {
   display: flex;
@@ -49,10 +69,7 @@ header {
   font-size: 75px;
 }
 
-form {
-  display: flex;
-}
-/*This area is for right side CSS*/
+/*Right side CSS*/
 
 .winner-info-side {
   background-color: #D0D2D3;
