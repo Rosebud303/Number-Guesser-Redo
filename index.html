@@ -13,39 +13,57 @@
     <main class="game-info-side side">
       <section class="range-box box">
         <h3>Set Range</h3>
-        <div>
-          <p>Min Range</p>
-          <input class="min-range-input" type="number" name="">
-        </div>
-        <div>
-          <p>Max Range</p>
-          <form>
-            <input class="max-range-input" type="number" name="">
+        <article class="range-inputs"> 
+          <div>
+            <p>Min Range</p>
+            <form>             
+              <input class="min-range-input min-max" type="number" name="">
+            </form>
           </div>
-          <button id="update-button" name="">Update</button>
-        </form>
+          <div>
+            <p>Max Range</p>
+            <form>
+              <input class="max-range-input min-max" type="number" name="">
+            </form>
+          </div>
+          <form>            
+            <button id="update-button" name="">Update</button>
+          </form>
+        </article>
       </section>
       <section class="player-info-box box">
         <p>The Current Range is <span class="current-min">1</span> to <span class="current-max">100</span></p>
         <h3>Challenger 1</h3>
-        <div>
-          <p>Name</p>
-          <input class="challenger1-name-input names" type="text" name="">
-        </div>
-        <div>
-          <p>Guess</p>
-          <input class="challanger1-guess-input guesses" type="number" name="">
-        </div>
+        <section class="player-inputs">
+          <div>
+            <p>Name</p>
+            <form>            
+              <input class="challenger1-name-input names" type="text" name="">
+            </form>
+          </div>
+          <div>
+            <p>Guess</p>
+            <form>        
+              <input class="challanger1-guess-input guesses" type="number" name="">
+            </form>
+          </div>
+        </section>
         <h3>Challenger 2</h3>
-        <div>
-          <p>Name</p>
-          <input class="challanger2-name-input names" type="text" name="">
-        </div>
-        <div>
-          <p>Guess</p>
-          <input class="challanger2-guess-input guesses" type="number" name="">
-        </div>
-        <form>
+        <section class="player-inputs">
+          <div>
+            <p>Name</p>
+            <form>            
+              <input class="challanger2-name-input names" type="text" name="">
+            </form>
+          </div>
+          <div>
+            <p>Guess</p>
+            <form>
+              <input class="challanger2-guess-input guesses" type="number" name="">
+            </form>
+          </div>
+        </section>
+        <form class="src-buttons">
           <button class="submit-button buttons">Submit Guess</button>
           <button class="reset-button buttons">Reset Game</button>
           <button class="clear-button buttons">Clear Game</button>
