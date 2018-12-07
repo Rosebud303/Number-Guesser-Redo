@@ -19,6 +19,7 @@ header {
 
 .full-game {
   display: flex;
+  height: 100vh;
 }
 .side {
   width: 50%;
@@ -41,6 +42,7 @@ header {
 }
 
 .min-max, .guesses {
+  width: 100%;
 
 }
 
@@ -66,7 +68,7 @@ header {
 
 .guess-display {
   color: #F74D98;
-  font-size: 75px;
+  font-size: 65px;
 }
 
 /*Right side CSS*/
