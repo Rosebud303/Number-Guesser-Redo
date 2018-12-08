@@ -6,10 +6,13 @@ var nameOneInput       =     document.querySelector('#challenger1-name-input');
 var nameTwoInput       =     document.querySelector('#challenger2-name-input');
 var updateButton       =     document.querySelector('#update-button');
 var submitButton       =     document.querySelector('#submit-button');
-
+var clearButton        =     document.querySelector('#clear-button');
+var resetButton        =     document.querySelector('#reset-button');
 
 updateButton.addEventListener('click', updateRange);
 submitButton.addEventListener('click', submitGuesses);
+clearButton.addEventListener('click', clearInputs);
+resetButton.addEventListener('click', resetGame);
 
 
 function updateRange(event) {
@@ -38,5 +41,23 @@ function submitGuesses(event) {
   guessTwoOutput.innerText = parseInt(guessTwoInput.value);
   nameOutputOne.innerText = nameOneInput.value;
   nameOutputTwo.innerText = nameTwoInput.value;
+}
+
+function clearInputs(event) {
+  event.preventDefault();
+  minInput.value = '';
+  maxInput.value = '';
+  guessOneInput.value = '';
+  guessTwoInput.value = '';
+  nameOneInput.value = '';
+  nameTwoInput.value = '';
+  console.log(minInput);
+}
+
+function resetGame() {
+  var max = parseInt(maxInput.value);
+  var min = parseInt(minInput.value);
+  randomNumber(max, min);
+  clearInputs();
 }
 
