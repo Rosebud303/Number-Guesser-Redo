@@ -12,6 +12,7 @@ UserGuess: #F74D98*/
 * {
   margin: 0;
   font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
 header {
@@ -34,6 +35,15 @@ header {
   font-weight: 100;
   font-size: 22px;
   color: white;
+}
+
+.sub-title:before, .sub-title:after {
+    content: "";
+    display: inline-block;
+    width: 185px;
+    margin: 0px auto;
+    vertical-align: middle;
+    border-bottom: 2px solid;
 }
 
 .full-game {
@@ -79,10 +89,34 @@ header {
 
 /*Box 1*/
 
+#update-button {
+  border: none;
+  background-color: gray;
+  color: white;
+  border-radius: 25px;
+  width: 25%;
+  height: 20px;
+  margin-left: 10px;
+}
+
 /*Box 2*/
 
 .src-buttons {
   display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.buttons {
+  width: 30%;
+  border: none;
+  background-color: gray;
+  color: white;
+  border-radius: 25px;
+}
+
+.gray-out {
+  background-color: #D0D2D3;
 }
 
 /*Box 3*/
