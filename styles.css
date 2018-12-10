@@ -30,6 +30,10 @@ header {
   font-weight: 100;
 }
 
+.css-input {
+  width: 30%;
+}
+
 .sub-title {
   padding-bottom: 20px;
   font-weight: 100;
@@ -40,7 +44,7 @@ header {
 .sub-title:before, .sub-title:after {
     content: "";
     display: inline-block;
-    width: 185px;
+    width: 30px;
     margin: 0px auto;
     vertical-align: middle;
     border-bottom: 2px solid;
@@ -49,9 +53,15 @@ header {
 .full-game {
   display: flex;
   height: 100vh;
+  color: #6E6E6E;
 }
 .side {
   width: 50%;
+}
+
+.inputs {
+  height: 40px;
+  font-size: 20px;
 }
 
 /*Left side main CSS*/
@@ -64,14 +74,15 @@ header {
   background-color: #FFFFFF;
   border: 2px solid #D0D2D3;
   margin: 10px;
+  padding: 10px;
 }
 
 .range-box{
-  height: 110px;
+  height: 14vh;
 }
 
 .player-info-box {
-  height: 330px;
+  height: 38vh;
 }
 
 .user-stats-box {
@@ -80,11 +91,12 @@ header {
 
 .player-inputs, .range-inputs {
   display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
 }
 
 .min-max, .guesses {
   width: 100%;
-
 }
 
 /*Box 1*/
@@ -95,15 +107,22 @@ header {
   color: white;
   border-radius: 25px;
   width: 25%;
-  height: 20px;
   margin-left: 10px;
+  height: 40px;
+  margin-top: 18px;
+  font-size: inherit;
+  font-weight: bold;
 }
 
 /*Box 2*/
 
+.challenger {
+  margin-top: 10px;
+}
+
 .src-buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 25px;
 }
 
@@ -113,10 +132,26 @@ header {
   background-color: gray;
   color: white;
   border-radius: 25px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .gray-out {
   background-color: #D0D2D3;
+}
+
+.name-input {
+  width: 80%;
+}
+
+.names {
+  width: 90%;
+}
+
+.current-min, .current-max {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /*Box 3*/
@@ -136,6 +171,10 @@ header {
   font-size: 65px;
 }
 
+.player2-displays {
+  border-left: 1px solid #6E6E6E;
+}
+
 /*Right side CSS*/
 
 .winner-info-side {
@@ -148,6 +187,16 @@ header {
   background-color: #FFFFFF;
   padding: 10px;
   margin: 10px;
+}
+
+.card-names {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #6E6E6E;
+}
+
+.winner {
+  text-align: center;
 }
 
 
