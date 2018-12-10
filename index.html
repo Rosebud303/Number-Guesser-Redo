@@ -16,39 +16,39 @@
       <section class="range-box box">
         <h3>Set Range</h3>
         <article class="range-inputs"> 
-          <form>             
+          <form class="css-input">             
             <label for="min-range-input">Min Range</label>
-            <input id="min-range-input" class="min-max" type="number" name="">
+            <input id="min-range-input" class="min-max inputs" type="number" name="">
           </form>
-          <form>
+          <form class="css-input">
             <label for="max-range-input">Max Range</label>
-            <input id="max-range-input" class="min-max" type="number" name="">
+            <input id="max-range-input" class="min-max inputs" type="number" name="">
           </form>
           <button id="update-button" name="">Update</button>
         </article>
       </section>
       <section class="player-info-box box">
         <p>The Current Range is <span class="current-min">1</span> to <span class="current-max">100</span></p>
-        <h3>Challenger 1</h3>
+        <h3 class="challenger">Challenger 1</h3>
         <section class="player-inputs">
-          <form>            
+          <form class="name-input">            
             <label for="challenger1-name-input">Name</label></br>
-            <input id="challenger1-name-input" class="names" type="text" name="">
+            <input id="challenger1-name-input" class="names inputs" type="text" name="">
           </form>
-          <form>        
+          <form class="css-input">        
             <label for="challenger1-guess-input">Guess</label></br>
-            <input id="challenger1-guess-input" class="guesses" type="number" name="">
+            <input id="challenger1-guess-input" class="guesses inputs" type="number" name="">
           </form>
         </section>
-        <h3>Challenger 2</h3>
+        <h3 class="challenger">Challenger 2</h3>
         <section class="player-inputs">
-          <form>            
+          <form class="name-input">            
             <label for="challenger2-name-input">Name</label></br>
-            <input id="challenger2-name-input" class="names" type="text" name="">
+            <input id="challenger2-name-input" class="names inputs" type="text" name="">
           </form>
-          <form>
+          <form class="css-input">
             <label for="challenger2-guess-input">Guess</label></br>
-            <input id="challenger2-guess-input" class="guesses" type="number" name="">
+            <input id="challenger2-guess-input" class="guesses inputs" type="number" name="">
           </form>
         </section>
         <form class="src-buttons">
@@ -77,14 +77,14 @@
     </section>
     <section class="winner-info-side side">
       <section class="full-card-info">
-        <section>
+        <section class="card-names">
           <h3>Challenger 1 Name</h3>
           <p>vs</p>
           <h3>Challenger 2 Name</h3>
         </section>
         <section>
-          <h2>Challenger place holder</h2>
-          <h2>Winner</h2>
+          <h2 class="winner">Challenger place holder</h2>
+          <h2 class="winner">Winner</h2>
         </section>
         <section>
           <p><span>#</span> Guesses</p>

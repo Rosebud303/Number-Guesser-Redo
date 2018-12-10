@@ -24,7 +24,6 @@ window.onload = function() {
   correctNumber = randomNumber(100, 1);
 }
 
-
 function updateRange(event) {
   event.preventDefault();
   var currentMin = document.querySelector('.current-min');
@@ -69,12 +68,16 @@ function resetGame(event) {
 }
 
 function clearAll() {
-  minInput.value = '';
-  maxInput.value = '';
-  guessOneInput.value = '';
-  guessTwoInput.value = '';
-  nameOneInput.value = '';
-  nameTwoInput.value = '';
+  var allInputs = document.querySelectorAll('.inputs');
+  for (var i = 0; i < allInputs.length; i++) {
+    allInputs[i].value = '';
+  // minInput.value = '';
+  // maxInput.value = '';
+  // nameOneInput.value = '';
+  // guessOneInput.value = '';
+  // nameTwoInput.value = '';
+  // guessTwoInput.value = '';
+  }
 }
 
 function enableButtons() {
@@ -99,7 +102,7 @@ function playerRatings() {
       ratingOutput.innerText = 'That\'s too high';
     } else if(parseInt(guessInput.value) < correctNumber) {
       ratingOutput.innerText = 'That\'s too low';
-    } else {
+    } else if (parseInt(guessInput.value) === correctNumber) {
       ratingOutput.innerText = 'BOOM!';
     }
   }
