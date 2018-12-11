@@ -8,6 +8,8 @@ var updateButton       =     document.querySelector('#update-button');
 var submitButton       =     document.querySelector('#submit-button');
 var clearButton        =     document.querySelector('#clear-button');
 var resetButton        =     document.querySelector('#reset-button');
+var currentMin         =     document.querySelector('.current-min');
+var currentMax         =     document.querySelector('.current-max');
 
 updateButton.addEventListener('click', updateRange);
 submitButton.addEventListener('click', submitGuesses);
@@ -26,8 +28,6 @@ window.onload = function() {
 
 function updateRange(event) {
   event.preventDefault();
-  var currentMin = document.querySelector('.current-min');
-  var currentMax = document.querySelector('.current-max');
   var maxHi = parseInt(maxInput.value);
   var minLo = parseInt(minInput.value);
   currentMin.innerText = minInput.value;
@@ -52,6 +52,7 @@ function submitGuesses(event) {
   nameOutputOne.innerText = nameOneInput.value;
   nameOutputTwo.innerText = nameTwoInput.value;
   playerRatings();
+  errorMessage();
 }
 
 function clearInputs(event) {
@@ -63,6 +64,8 @@ function clearInputs(event) {
 function resetGame(event) {
   event.preventDefault();
   correctNumber = randomNumber(100, 1);
+  currentMin.innerText = 1;
+  currentMax.innerText = 100;
   clearAll();
   enableButtons();
 }
@@ -71,12 +74,6 @@ function clearAll() {
   var allInputs = document.querySelectorAll('.inputs');
   for (var i = 0; i < allInputs.length; i++) {
     allInputs[i].value = '';
-  // minInput.value = '';
-  // maxInput.value = '';
-  // nameOneInput.value = '';
-  // guessOneInput.value = '';
-  // nameTwoInput.value = '';
-  // guessTwoInput.value = '';
   }
 }
 
@@ -104,6 +101,38 @@ function playerRatings() {
       ratingOutput.innerText = 'That\'s too low';
     } else if (parseInt(guessInput.value) === correctNumber) {
       ratingOutput.innerText = 'BOOM!';
+      appendCard(nameOneInput.value, nameTwoInput.value);
     }
   }
+}
+
+// function errorMessage() {
+//   var ratingTwo = document.querySelector('.player2-rating')
+//   if(guessOneInput.value < minInput.value || guessTwoInput.value < minInput.value) {
+//     ratingTwo.innerText = 'NAHHH';
+//   }
+// }
+
+function appendCard(player1, player2, winner) {
+  var rightSide = document.querySelector('.winner-info-side');
+  var cardHtml = 
+    `      
+      <section class="full-card-info">
+        <section class="card-names">
+          <h3>${player1}</h3>
+          <p>vs</p>
+          <h3>${player2}</h3>
+        </section>
+        <section>
+          <h2 class="winner">${winner}</h2>
+          <h2 class="winner">Winner</h2>
+        </section>
+        <section>
+          <p><span>#</span> Guesses</p>
+          <p><span>#</span> Minutes</p>
+          <img class="delete-button" src="#">
+        </section>
+      </section>
+    `
+    rightSide.innerHTML += cardHtml;
 }
