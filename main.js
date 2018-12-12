@@ -10,12 +10,17 @@ var clearButton        =     document.querySelector('#clear-button');
 var resetButton        =     document.querySelector('#reset-button');
 var currentMin         =     document.querySelector('.current-min');
 var currentMax         =     document.querySelector('.current-max');
+var errorShow          =     document.querySelector('.error');
+var errorShowTwo       =     document.querySelector('.error2');
+var errorShowThree     =     document.querySelector('.error3');  
+var rightSide          =     document.querySelector('.winner-info-side');
 
 updateButton.addEventListener('click', updateRange);
 submitButton.addEventListener('click', submitGuesses);
 clearButton.addEventListener('click', clearInputs);
 resetButton.addEventListener('click', resetGame);
-minInput.addEventListener('keyup', enableButtons)
+minInput.addEventListener('keyup', enableButtons);
+rightSide.addEventListener('click', deleteCard);
 
 clearButton.disabled = true;
 resetButton.disabled = true;
@@ -30,9 +35,11 @@ function updateRange(event) {
   event.preventDefault();
   var maxHi = parseInt(maxInput.value);
   var minLo = parseInt(minInput.value);
-  currentMin.innerText = minInput.value;
-  currentMax.innerText = maxInput.value;
+  currentMin.innerText = parseInt(minInput.value);
+  currentMax.innerText = parseInt(maxInput.value);
   correctNumber = randomNumber(maxHi, minLo);
+  errorMessage();
+
 }
 
 function randomNumber(max, min) {
@@ -52,6 +59,7 @@ function submitGuesses(event) {
   nameOutputOne.innerText = nameOneInput.value;
   nameOutputTwo.innerText = nameTwoInput.value;
   playerRatings();
+  errorMessageTwo();
 }
 
 function clearInputs(event) {
@@ -106,12 +114,39 @@ function playerRatings() {
 }
 
 function errorMessage() {
-  if(){
+  min = parseInt(minInput.value);
+  max = parseInt(maxInput.value);
+  if(min > max){
+    errorShow.classList.remove('hidden');
+    clearAll();
+  } else {
+    errorShow.classList.add('hidden');
+  }
+}
+
+function errorMessageTwo() {
+  min = parseInt(minInput.value);
+  max = parseInt(maxInput.value);
+  guessOne = parseInt(guessOneInput.value);
+  guessTwo = parseInt(guessTwoInput.value);
+  if(guessOne > max || guessOne < min) {
+    errorShowTwo.classList.remove('hidden');
+    clearAll();
+  } else if (guessTwo > max || guessTwo < min) {
+    errorShowThree.classList.remove('hidden')
+  } else {
+    errorShowTwo.classList.add('hidden');
+    errorShowThree.classList.add('hidden');
+  }
+}
+
+function deleteCard(){
+if (event.target.className === 'delete-button'){
+    event.target.parentElement.parentElement.remove();
   }
 }
 
 function appendCard(player1, player2, winner) {
-  var rightSide = document.querySelector('.winner-info-side');
   var cardHtml = 
     `      
       <section class="full-card-info">
@@ -131,5 +166,5 @@ function appendCard(player1, player2, winner) {
         </section>
       </section>
     `
-    rightSide.innerHTML += cardHtml;
-}
+    rightSide.innerHTML = cardHtml + rightSide.innerHTML ;
+};
