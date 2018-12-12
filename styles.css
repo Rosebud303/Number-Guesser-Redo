@@ -78,15 +78,15 @@ header {
 }
 
 .range-box{
-  height: 14vh;
+  /*height: 14vh;*/
 }
 
 .player-info-box {
-  height: 38vh;
+  /*height: 38vh;*/
 }
 
 .user-stats-box {
-  height: 200px;
+  /*height: 200px;*/
 }
 
 .player-inputs, .range-inputs {
