@@ -52,7 +52,6 @@ function submitGuesses(event) {
   nameOutputOne.innerText = nameOneInput.value;
   nameOutputTwo.innerText = nameTwoInput.value;
   playerRatings();
-  errorMessage();
 }
 
 function clearInputs(event) {
@@ -106,12 +105,10 @@ function playerRatings() {
   }
 }
 
-// function errorMessage() {
-//   var ratingTwo = document.querySelector('.player2-rating')
-//   if(guessOneInput.value < minInput.value || guessTwoInput.value < minInput.value) {
-//     ratingTwo.innerText = 'NAHHH';
-//   }
-// }
+function errorMessage() {
+  if(){
+  }
+}
 
 function appendCard(player1, player2, winner) {
   var rightSide = document.querySelector('.winner-info-side');
