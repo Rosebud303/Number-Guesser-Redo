@@ -2,8 +2,8 @@ var minInput           =     document.querySelector('#min-range-input');
 var maxInput           =     document.querySelector('#max-range-input');
 var guessOneInput      =     document.querySelector('#challenger1-guess-input');
 var guessTwoInput      =     document.querySelector('#challenger2-guess-input');
-var nameOneInput       =     document.querySelector('#challenger1-name-input');
-var nameTwoInput       =     document.querySelector('#challenger2-name-input');
+var name1Input         =     document.querySelector('#challenger1-name-input');
+var name2Input         =     document.querySelector('#challenger2-name-input');
 var updateButton       =     document.querySelector('#update-button');
 var submitButton       =     document.querySelector('#submit-button');
 var clearButton        =     document.querySelector('#clear-button');
@@ -56,8 +56,8 @@ function submitGuesses(event) {
   var nameOutputTwo = document.querySelector('.challenger2-name-display');
   guessOneOutput.innerText = parseInt(guessOneInput.value);
   guessTwoOutput.innerText = parseInt(guessTwoInput.value);
-  nameOutputOne.innerText = nameOneInput.value;
-  nameOutputTwo.innerText = nameTwoInput.value;
+  nameOutputOne.innerText = name1Input.value;
+  nameOutputTwo.innerText = name2Input.value;
   playerRatings();
   errorMessageTwo();
 }
@@ -86,11 +86,11 @@ function clearAll() {
 
 function enableButtons() {
   if(minInput.value === '' && maxInput.value === '' && guessOneInput.value === ''
-    && guessTwoInput.value === '' && nameOneInput.value === '' && nameTwoInput.value === '') {
+    && guessTwoInput.value === '' && name1Input.value === '' && name2Input.value === '') {
     clearButton.classList.add('gray-out');
     resetButton.classList.add('gray-out');
   } else if (minInput.value !== '' || maxInput.value !== '' || guessOneInput.value !== '' 
-    || guessTwoInput.value !== '' || nameOneInput.value !== '' || nameTwoInput.value !== '') {
+    || guessTwoInput.value !== '' || name1Input.value !== '' || name2Input.value !== '') {
     clearButton.classList.remove('gray-out');
     resetButton.classList.remove('gray-out');
     clearButton.disabled = false;
@@ -108,7 +108,9 @@ function playerRatings() {
       ratingOutput.innerText = 'That\'s too low';
     } else if (parseInt(guessInput.value) === correctNumber) {
       ratingOutput.innerText = 'BOOM!';
-      appendCard(nameOneInput.value, nameTwoInput.value);
+      winnerName = document.querySelector(`#challenger${i}-name-input`);
+      console.log(winnerName.value);
+      appendCard(name1Input.value, name2Input.value, winnerName.value);
     }
   }
 }
