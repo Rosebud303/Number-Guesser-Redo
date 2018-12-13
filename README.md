@@ -19,3 +19,9 @@ new range within the element ‘.current-min’ and ‘.current-max’.
 Super fun and  cool. 
 
 Things get even cooler,  if your players guesses are too high, too low, or the correct number they will see just that in the player stats section of the game. Even further, if they guessed the correct number they get a player winner card that displays itself. 
+
+## My-Project
+![Screenshot](screen1.png)
+
+## Responsiveness
+![Screenshot](screen2.png)
