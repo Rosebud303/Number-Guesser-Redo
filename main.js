@@ -109,7 +109,6 @@ function playerRatings() {
     } else if (parseInt(guessInput.value) === correctNumber) {
       ratingOutput.innerText = 'BOOM!';
       winnerName = document.querySelector(`#challenger${i}-name-input`);
-      console.log(winnerName.value);
       appendCard(name1Input.value, name2Input.value, winnerName.value);
     }
   }
