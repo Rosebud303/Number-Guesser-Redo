@@ -160,10 +160,10 @@ function appendCard(player1, player2, winner) {
           <h2 class="winner">${winner}</h2>
           <h2 class="winner">Winner</h2>
         </section>
-        <section>
+        <section class='card-bottom'>
           <p><span>#</span> Guesses</p>
           <p><span>#</span> Minutes</p>
-          <img class="delete-button" src="#">
+          <img class='delete-button' src='svg.png'>
         </section>
       </section>
     `
